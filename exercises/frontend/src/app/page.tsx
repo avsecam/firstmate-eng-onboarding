@@ -84,21 +84,23 @@ const NameEditor = (props: {
       <div className="py-[12px]">
         <div className="py-[4px]">
           <input
+            aria-label="first-name"
             className="text-black"
             placeholder={"First Name"}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
           <input
+            aria-label="last-name"
             className="text-black"
             placeholder={"Last Name"}
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
         </div>
-        <button onClick={() => onSaveNames(firstName, lastName)}>Save</button>
+        <button aria-label="save" onClick={() => onSaveNames(firstName, lastName)}>Save</button>
       </div>
-      <div>
+      <div aria-label="output">
         {fullName && (<p>Hello, {fullName}!</p>)}
       </div>
     </div>
