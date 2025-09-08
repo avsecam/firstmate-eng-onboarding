@@ -77,7 +77,7 @@ const NameEditor = (props: {
   useEffect(() => {
     setFullName(`${firstName} ${lastName}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fetchedFirstName, fetchedLastName]);
 
   return (
     <div>
